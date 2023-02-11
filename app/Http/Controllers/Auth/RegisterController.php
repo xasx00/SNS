@@ -79,8 +79,8 @@ class RegisterController extends Controller
         if($request->isMethod('post')){
             $data = $request->input();
 
-            $this->create($data);
-            return redirect('added');
+            $username = $this->create($data);
+            return redirect('added') -> with ('username',$data['username']);
         }
         return view('auth.register');
     }
@@ -88,4 +88,5 @@ class RegisterController extends Controller
     public function added(){
         return view('auth.added');
     }
+
 }

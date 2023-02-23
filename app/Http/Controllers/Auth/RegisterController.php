@@ -89,4 +89,9 @@ class RegisterController extends Controller
         return view('auth.added');
     }
 
+    /*public function redirectPath()
+    {
+        return '/login';
+    }*/
+
 }

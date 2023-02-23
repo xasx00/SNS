@@ -53,15 +53,10 @@ h1 img {
 }
 
 
-.menu ul {
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-}
-
 /*アコーディオンメニュー*/
 
 .accordion-001 {
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .accordion-001:not([open]) {
@@ -101,11 +96,13 @@ h1 img {
 }
 
 .accordion-001 ul {
+    border: 1px solid #666;
+    list-style-type: none;
     position: absolute;
     transform: translateY(-10px);
     opacity: 0;
-    margin: 0;
-    padding: 1em 2em 2em 2em;
+    margin: 1.5rem;
+    padding: 0 3rem;
     color: #333333;
     transition: transform .5s, opacity .5s;
 }
@@ -118,7 +115,8 @@ h1 img {
 .accordion-001 ul li {
     width: fit-content;
     margin: auto;
-
+    max-width: auto;
+    padding: 0.5em;
 }
 
 /* main content */

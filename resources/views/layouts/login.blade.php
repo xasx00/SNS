@@ -28,16 +28,17 @@
             </div>
             <div id="user">
                 <div class="username">
-                    <p>{{ session('username') }}さん</p>
+                    <p>{{ session('username') }}  さん</p>
                 </div>
-                <div class="menu">
-                    <a class="menuicon">↓</a>
+                <!--アコーディオンメニュー-->
+                <details class="accordion-001">
+                    <summary></summary>
                     <ul>
                         <li class="menu-item"><a href="/top">HOME</a></li>
                         <li class="menu-item"><a href="/profile">プロフィール編集</a></li>
                         <li class="menu-item"><a href="/logout">ログアウト</a></li>
                     </ul>
-                </div>
+                </details>
                 <div class ="usericon">
                     <a><img src={{ asset('images/icon1.png') }}></a>
                 </div>

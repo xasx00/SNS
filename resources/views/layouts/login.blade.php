@@ -5,7 +5,7 @@
     <!--IEブラウザ対策-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="ページの内容を表す文章" />
-    <title></title>
+    <title>AtlasSNS</title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
     <!--スマホ,タブレット対応-->
@@ -21,17 +21,26 @@
 </head>
 <body>
     <header>
-        <div id = "head">
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/logout">ログアウト</a></li>
-                </ul>
+        <div class = "header-wrap">
+            <div id = "head">
+                {{-- ロゴトップ --}}
+                <h1><a href="/top"><img src={{ asset('images/atlas.png') }}></a></h1>
+            </div>
+            <div id="user">
+                <div class="username">
+                    <p>{{ session('username') }}さん</p>
+                </div>
+                <div class="menu">
+                    <a class="menuicon">↓</a>
+                    <ul>
+                        <li class="menu-item"><a href="/top">HOME</a></li>
+                        <li class="menu-item"><a href="/profile">プロフィール編集</a></li>
+                        <li class="menu-item"><a href="/logout">ログアウト</a></li>
+                    </ul>
+                </div>
+                <div class ="usericon">
+                    <a><img src={{ asset('images/icon1.png') }}></a>
+                </div>
             </div>
         </div>
     </header>
